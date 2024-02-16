@@ -14,10 +14,6 @@ jobs:
 
       - name: Python packet
         uses: actions/setup-python@v2 
-        with:
-          path: envio_dependencies
-          key: ${{ runner.os }}-${{ hashFiles('**/apt.lock')}}
-
   
       - name: Install dependencies 
         run: |
