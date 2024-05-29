@@ -21,3 +21,4 @@ jobs:
           python -m pip install --upgrade setuptools
           pip install torch 
           pip install torchvision
+          pip install requests
