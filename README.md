@@ -17,6 +17,11 @@ pip install torch
 ```
 pip install torchvision
 ```
+
+```
+pip install requests
+```
+
 <h2> Bibliotecas </h2>
 
 ```python 
