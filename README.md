@@ -60,3 +60,21 @@ transform = transforms.Compose([
 img_tensor = transform(imagem)
 img_tensor = img_tensor.unsqueeze(0) #usado para adicionar uma dimensão extra ao tensor
 ```
+<strong> Classificar a imagem </strong>
+```python
+modelo.eval()
+with torch.no_grad():
+    outputs = modelo(img_tensor)
+_, predicted = torch.max(outputs, 1)
+```
+
+<strong>Obter a classe prevista e o rótulo correspondente</strong>
+```python
+classe = predicted.item()
+rotulo = rotulos[str(classe)][1]
+```
+<strong> Imprimir a classe prevista e o rótulo correspondente </strong>
+```python
+print(f"Classe prevista: {classe}")
+print(f"Rótulo: {rotulo}"
+```
